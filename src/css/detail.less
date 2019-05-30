@@ -1,0 +1,57 @@
+@charset "utf-8";
+//header 隐藏显示
+header{
+    transition: .8s;
+}
+.header-show{
+    height: 82px;
+}
+.header-hide{
+    height:0
+}
+// main-模板
+.detail-main {
+    position: relative;
+    padding-top: 66px;
+    line-height: 1.5;
+
+    //第一个小导航
+    .detail-main-first-nav {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        background: #f6f8fb;
+
+        .detail-main-first-nav-list {
+            float: right;
+            margin-top: 26px;
+            margin-right: -15px;
+
+            .list-iteam {
+                float: left;
+                position: relative;
+                z-index: 1;
+                border-right: 1px solid #dedede;
+
+                a {
+                    display: block;
+                    padding: 0 20px;
+                    line-height: 20px;
+                    font-size: 16px;
+                    color: #333;
+                    text-decoration: none;
+                    transition: color .3s;
+                }
+            }
+        }
+
+        .nav-name {
+            position: absolute;
+            left: 0;
+            top: 15px;
+            font-size: 26px;
+        }
+    }
+
+}
