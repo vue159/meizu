@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<!-- saved from url=(0123)file:///Users/yefeifei/code/%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5/1903/%E5%89%8D%E5%9B%9B%E5%91%A8/week4/day18/todolist.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 重置样式 */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        body {
+            font-size: 16px;
+            background: #CDCDCD;
+        }
+
+        .wrapper {
+            width: 600px;
+            margin: 0 auto;
+            padding: 0 10px;
+
+        }
+
+        /* header */
+        header {
+            height: 50px;
+            background: rgba(47, 47, 47, 0.98);
+        }
+
+        header input {
+            float: right;
+            width: 60%;
+            height: 24px;
+            margin-top: 12px;
+            text-indent: 10px;
+            border-radius: 5px;
+            box-shadow: 0 1px 0 rgba(255, 255, 255, 0.24), 0 1px 6px rgba(0, 0, 0, 0.45) inset;
+            border: none;
+            outline: none;
+        }
+
+
+
+        label {
+            float: left;
+            width: 100px;
+            line-height: 50px;
+            color: #DDD;
+            font-size: 24px;
+            cursor: pointer;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        /* main */
+        h2 {
+            display: block;
+            font-size: 1.5em;
+            margin-block-start: 0.83em;
+            margin-block-end: 0.83em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            font-weight: bold;
+            position: relative;
+        }
+
+        li {
+
+            height: 32px;
+            line-height: 32px;
+            background: #fff;
+            position: relative;
+            margin-bottom: 10px;
+            padding: 0 45px;
+            border-radius: 3px;
+            /* border-left: 5px solid #629A9C; */
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
+        }
+
+        .todo_ing li {
+            height: 32px;
+            line-height: 32px;
+            background: #fff;
+            position: relative;
+            margin-bottom: 10px;
+            padding: 0 45px;
+            border-radius: 3px;
+            border-left: 5px solid #629A9C;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
+        }
+
+        .ending li {
+            height: 32px;
+            line-height: 32px;
+            background: rgb(255, 255, 255);
+            opacity: .5;
+            position: relative;
+            margin-bottom: 10px;
+            padding: 0 45px;
+            border-radius: 3px;
+            border-left: 5px solid #aaa;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
+        }
+
+        /* li {
+            
+        } */
+
+        #check {
+            position: absolute;
+            top: 5px;
+            left: 15px;
+            width: 22px;
+            height: 22px;
+            cursor: pointer;
+            background: #aaa;
+        }
+
+        li p {
+            display: block;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+        }
+
+        li a {
+            position: absolute;
+            top: 2px;
+            right: 5px;
+            display: inline-block;
+            width: 14px;
+            height: 12px;
+            border-radius: 14px;
+            border: 6px double #FFF;
+            background: #CCC;
+            line-height: 14px;
+            text-align: center;
+            color: #FFF;
+            font-weight: bold;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        span {
+            position: absolute;
+            top: 2px;
+            right: 5px;
+            display: inline-block;
+            padding: 0 5px;
+            height: 20px;
+            border-radius: 20px;
+            background: #E6E6FA;
+            line-height: 22px;
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* footer */
+        footer {
+            color: #666;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #999;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <!-- wrapper -->
+        <div class="wrapper">
+            <label for="title">ToDoList</label>
+            <input type="text" id="title" name="title" placeholder="添加ToDo" required="required" autocomplete="off">
+        </div>
+    </header>
+    <!-- main -->
+    <div id="main">
+        <!-- wrapper -->
+        <div class="wrapper">
+            <!-- 正在进行 -->
+            <h2>正在进行<span id="todocount">0</span></h2>
+            <ul class="todo_ing"><li><input type="checkbox" id="check" name="check"><p>sad</p><a>-</a></li><li><input type="checkbox" id="check" name="check"><p>asd</p><a>-</a></li><li><input type="checkbox" id="check" name="check"><p>asd</p><a>-</a></li></ul>
+            <!-- 已经完成 -->
+            <h2>已经完成<span id="todocount">0</span></h2>
+            <ul class="ending"><li><input type="checkbox" id="check" name="check"><p>asdffds</p><a>-</a></li></ul>
+        </div>
+    </div>
+    <!-- footer -->
+    <footer>
+        Copyright © 2014 todolist.cn <a href="file:///Users/yefeifei/code/%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5/1903/%E5%89%8D%E5%9B%9B%E5%91%A8/week4/day18/todolist.html#" class="clearall">clear</a>
+    </footer>
+    <script src="file:///Users/yefeifei/code/%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5/1903/%E5%89%8D%E5%9B%9B%E5%91%A8/week4/day18/base.js"></script>
+    <script>
+        var inp = $('#title')[0];
+        var doing = $('.todo_ing')[0];
+        var ending = $('.ending')[0];
+        var endLi = $('.ending>li');
+        var oSpan = $('#todocount')
+        //获取缓存
+        var ls = localStorage
+        // 创建事件
+        inp.onkeyup = function (ev) {
+            var ev = ev || event
+            var todoValue = inp.value//获取输入框的内容并赋值给一个变量
+            if (ev.keyCode == 13) {
+                //输入框内容为空时不允许添加
+                if (todoValue == '') {
+                    return
+                }
+                //当输入框内容赋值出去之后将内容清空
+                inp.value = ''
+                oLi = document.createElement('li');
+                doing.insertBefore(oLi, doing.childNodes[0])
+
+                var oCheck = document.createElement('input');
+                oCheck.type = 'checkbox';
+                oCheck.id = 'check';
+                oCheck.name = 'check';
+                oLi.appendChild(oCheck);
+
+                // length()
+                save()
+                oP = document.createElement('p');
+                oLi.appendChild(oP);
+                oP.innerText = todoValue
+                var oA = document.createElement('a');
+                oA.innerText = '-'
+                oLi.appendChild(oA);
+                //删除事件
+                // console.log(oLi)
+                oLi.onclick = function (ev) {
+                    ev = ev || event;
+                    if (ev.target == oA) {
+                        // console.log('删除le')
+                        ev.target.parentNode.remove()
+                        // length()
+                        save()
+                    }
+                    if (ev.target == oCheck) {
+                        // console.log(this)
+                        if (ev.target.checked) {
+                            ending.appendChild(this);
+                        } else {
+
+                            doing.appendChild(this)
+                        }
+                        // length()
+                        save()
+                    }
+                }
+            }
+        }
+        // function length() {
+        //     var do_length = $('.todo_ing>li').length;
+        //     var end_length = $('.ending>li').length;
+        //     oSpan[0].innerHTML = do_length;
+        //     oSpan[1].innerHTML = end_length;
+
+        // }
+        $('.clearall')[0].onclick = function () {
+            doing.innerHTML = '';
+            ending.innerHTML = '';
+            // length()
+            save()
+        }
+        var ls = localStorage;
+        function save(){
+            ls.setItem('doing',doing.innerHTML)
+            ls.setItem('ending',ending.innerHTML)
+        }
+        doing.innerHTML=ls.getItem('doing')
+        ending.innerHTML=ls.getItem('ending')
+        oSpan[0].innerHTML=$('.todo_ing>li').length
+        oSpan[1].innerHTML=$('.endingg>li').length
+        // function saveData() {
+        //     ls.setItem('todo', $('#todolist')[0].innerHTML);
+        //     ls.setItem('done', $('#donelist')[0].innerHTML);
+        // }
+
+        // $('#todolist')[0].innerHTML = ls.getItem('todo');
+        // $('#donelist')[0].innerHTML = ls.getItem('done');
+        // $('#todocount')[0].innerHTML = $('#todolist>li').length;
+        // $('#donecount')[0].innerHTML = $('#donelist>li').length;
+
+        // console.log(oCheck);
+        //删除li if(oLi){ 
+
+        // var oA=$('a')
+
+    </script>
+
+
+</body></html>
