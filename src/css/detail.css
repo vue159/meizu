@@ -1,6 +1,6 @@
 @charset "utf-8";
 header {
-  transition: .8s;
+  transition: 1s;
 }
 .header-show {
   height: 82px;
@@ -10,39 +10,328 @@ header {
 }
 .detail-main {
   position: relative;
-  padding-top: 66px;
   line-height: 1.5;
 }
 .detail-main .detail-main-first-nav {
-  position: absolute;
+  position: sticky;
+  z-index: 10;
   left: 0;
   top: 0;
   width: 100%;
+  opacity: .8;
   background: #f6f8fb;
 }
 .detail-main .detail-main-first-nav .detail-main-first-nav-list {
   float: right;
-  margin-top: 26px;
   margin-right: -15px;
 }
 .detail-main .detail-main-first-nav .detail-main-first-nav-list .list-iteam {
   float: left;
   position: relative;
   z-index: 1;
-  border-right: 1px solid #dedede;
+  height: 55px;
+  line-height: 55px;
+}
+.detail-main .detail-main-first-nav .detail-main-first-nav-list .list-iteam:last-of-type a {
+  border-right: none;
 }
 .detail-main .detail-main-first-nav .detail-main-first-nav-list .list-iteam a {
-  display: block;
+  border-right: 1px solid #dedede;
   padding: 0 20px;
+  height: 20px;
+  vertical-align: middle;
+  display: inline-block;
   line-height: 20px;
   font-size: 16px;
-  color: #333;
-  text-decoration: none;
+  color: #000;
   transition: color .3s;
 }
+.detail-main .detail-main-first-nav .detail-main-first-nav-list .list-iteam a:hover {
+  color: #00c3f5;
+}
 .detail-main .detail-main-first-nav .nav-name {
+  position: relative;
+  color: black;
+  left: 0;
+  top: 10px;
+  font-size: 26px;
+}
+.detail-main .detail-main-choise {
+  background: #fff;
+}
+.detail-main .detail-main-choise .details-main-choise-left {
+  width: 560px;
+  margin-right: 40px;
+}
+.detail-main .detail-main-choise .details-main-choise-left .preview-booth {
+  margin: 8px 0;
+  width: 560px;
+  height: 560px;
+}
+.detail-main .detail-main-choise .details-main-choise-left .preview-booth a {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.detail-main .detail-main-choise .details-main-choise-left .preview-booth a img {
+  height: 100%;
+  width: 100%;
+}
+.detail-main .detail-main-choise .details-main-choise-left .preview-thumb {
+  overflow: hidden;
+  margin-top: 10px;
+  margin-left: 24px;
+}
+.detail-main .detail-main-choise .details-main-choise-left .preview-thumb li {
+  position: relative;
+  display: inline-block;
+  *zoom: 1;
+  margin: 0 24px;
+  overflow: hidden;
+  height: 102px;
+  cursor: pointer;
+}
+.detail-main .detail-main-choise .details-main-choise-left .preview-thumb li img {
+  position: relative;
+  max-width: 80px;
+  max-height: 80px;
+}
+.detail-main .detail-main-choise .details-main-choise-right {
+  position: relative;
+  width: 640px;
+  font-size: 12px;
+  padding-top: 25px;
+}
+.detail-main .detail-main-choise .details-main-choise-right .property-sell {
+  position: relative;
+  background: #f4f6fa;
+  padding: 16px 10px 12px;
+}
+.detail-main .detail-main-choise .details-main-choise-right .property-sell dl {
+  margin-left: 10px;
+  margin-top: 12px;
+  line-height: 22px;
+  font-size: 14px;
+}
+.detail-main .detail-main-choise .details-main-choise-right .property-sell .vm-entry {
+  float: left;
+  padding-left: 0;
+  line-height: 22px;
+  width: 85px;
+  font-size: 12px;
+  color: #8c8c8c;
+}
+.detail-main .detail-main-choise .details-main-choise-right .property-sell .vm-entry span {
+  border-radius: 2px;
+  color: #e02b41;
+  display: inline-block;
+  width: 72px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1;
+  padding: 4px 0;
+  background: #F2EAEF;
+}
+.detail-main .detail-main-choise .details-main-choise-right .property-sell dd {
+  display: -ms-flexbox;
+  display: flex;
+  color: #595959;
+}
+.detail-main .detail-main-choise .details-main-choise-right .property-sell .vm-more {
+  color: #27b3ff;
+  margin-left: 10px;
+}
+.detail-main .detail-main-choise .details-main-choise-right .property-sell-price {
+  height: 36px;
+  overflow: hidden;
+  padding-left: 10px;
+}
+.detail-main .detail-main-choise .details-main-choise-right .mod-price {
+  margin-right: 8px;
+  line-height: 36px;
+}
+.detail-main .detail-main-choise .details-main-choise-right .mod-price .vm-money {
+  color: #e02b41;
+  font-size: 36px;
+  font-weight: 500;
+}
+.detail-main .detail-main-choise .details-main-choise-right .mod-price small {
+  font-size: 24px;
+  color: #e02b41;
+}
+.detail-main .detail-main-choise .details-main-choise-right .property-sell-price .mod-original small,
+.detail-main .detail-main-choise .details-main-choise-right .property-sell-price .mod-price small {
+  font-family: arial;
+  font-style: normal;
+}
+.detail-main .detail-main-choise .details-main-choise-right .property-sell-price .mod-activity,
+.detail-main .detail-main-choise .details-main-choise-right .property-sell-price .mod-countdown,
+.detail-main .detail-main-choise .details-main-choise-right .property-sell-price .mod-original,
+.detail-main .detail-main-choise .details-main-choise-right .property-sell-price .mod-price {
+  float: left;
+}
+.detail-main .detail-main-choise .details-main-choise-right .property-hd,
+.detail-main .detail-main-choise .details-main-choise-right .property-out .mod-hd {
+  position: relative;
+  padding-top: 30px;
+  margin-bottom: 12px;
+}
+.detail-main .detail-main-choise .details-main-choise-right .property-hd h1,
+.detail-main .detail-main-choise .details-main-choise-right .property-out .mod-hd h1 {
+  margin-bottom: 4px;
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #262626;
+}
+.detail-main .detail-main-choise .details-main-choise-right .property-hd .mod-info,
+.detail-main .detail-main-choise .details-main-choise-right .property-out .mod-hd .mod-info {
+  font-size: 14px;
+  color: #999;
+}
+.detail-main .detail-main-choise .details-main-choise-right .property-hd .mod-info.activer,
+.detail-main .detail-main-choise .details-main-choise-right .property-out .mod-hd .mod-info.activer {
+  color: #e22841;
+}
+.detail-main .detail-main-choise .details-main-choise-right .city-content {
   position: absolute;
   left: 0;
-  top: 15px;
-  font-size: 26px;
+  z-index: 1000;
+  padding: 10px 0 15px;
+  width: 498px;
+  border: 1px solid #dedede;
+  /* display: none; */
+  height: auto;
+  background: #fff;
+}
+.detail-main .detail-main-choise .details-main-choise-right .city-content .JD-stock {
+  position: relative;
+}
+.detail-main .detail-main-choise .details-main-choise-right .city-content .JD-stock .mt .tab {
+  width: 478px;
+  height: 25px;
+  padding: 0 10px;
+  border-bottom: 1px solid #000;
+  margin-bottom: 10px;
+  overflow: visible;
+}
+.detail-main .detail-main-choise .details-main-choise-right .city-content .JD-stock .mt .tab li {
+  float: left;
+  padding: 0;
+}
+.detail-main .detail-main-choise .details-main-choise-right .city-content .JD-stock .mt .tab li a {
+  position: relative;
+  float: left;
+  height: 23px;
+  line-height: 23px;
+  padding: 0 21px 1px 11px;
+  margin-right: 3px;
+  border: 1px solid #ddd;
+  border-bottom: 0;
+  color: #000;
+  text-align: center;
+  cursor: pointer;
+}
+.detail-main .detail-main-choise .details-main-choise-right .city-content .JD-stock .mt .tab li a i {
+  position: absolute;
+  right: 4px;
+  top: 8px;
+  display: block;
+  width: 7px;
+  height: 5px;
+  overflow: hidden;
+  background-position: 0 -35px;
+  background-image: url(../images/city-coise.png);
+  background-repeat: no-repeat;
+}
+.detail-main .detail-main-choise .details-main-choise-right .city-content .JD-stock .mt .tab li a:hover i {
+  top: 10px;
+  background-position: 0 -28px;
+}
+.detail-main .detail-main-choise .details-main-choise-right .city-content .JD-stock .mc .area-list {
+  padding-top: 0;
+  position: absolute;
+}
+.detail-main .detail-main-choise .details-main-choise-right .city-content .JD-stock .mc .area-list li {
+  float: left;
+  width: 80px;
+  padding: 2px 0 2px 15px;
+  clear: none;
+}
+.detail-main .property-service {
+  border-bottom: 1px dashed #dedede;
+  padding: 18px 0;
+}
+.detail-main .property-service .vm-metatit {
+  line-height: 23px;
+}
+.detail-main .property-service .mod-bd {
+  display: inline-block;
+  vertical-align: middle;
+}
+.detail-main .property-service .mod-bd span {
+  float: left;
+  margin-right: 35px;
+  color: #8c8c8c;
+  line-height: 20px;
+  position: relative;
+}
+.detail-main .property-service .mod-bd span .have {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid #999696;
+  text-align: center;
+  line-height: 15px;
+  color: #333;
+  position: absolute;
+  left: -22px;
+  top: 1px;
+}
+.detail-main .property-service .property-service-suda dt {
+  vertical-align: top;
+  display: inline-block;
+}
+.detail-main .property-service .property-service-suda .mod-site {
+  vertical-align: top;
+  display: inline-block;
+  color: #000;
+  position: relative;
+  cursor: pointer;
+}
+.detail-main .property-service .property-service-suda .mod-site .sanjiao {
+  border: 8px solid transparent;
+  border-top-color: #000;
+  position: absolute;
+  right: -27px;
+  top: 6px;
+}
+.detail-main .property-service .vm-metatit-zc {
+  display: inline-block;
+  padding-left: 10px;
+  width: 75px;
+  font-size: 12px;
+  line-height: 42px;
+  color: #8c8c8c;
+}
+.main-box-shadow::after {
+  content: ' ';
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 20px;
+  background: url(../images/box-shadow.png) 50% bottom no-repeat;
+}
+.city-active {
+  border: 1px solid #000!important;
+  border-bottom: 0!important;
+  top: 1px;
+  background: #fff;
+}
+.city-active i {
+  background-position: 0 -28px !important;
+}
+.city-active:hover i {
+  top: 8px!important;
 }

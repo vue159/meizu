@@ -73,6 +73,10 @@ input[type="submit"] {
 .overflow {
   overflow: hidden;
 }
+img {
+  border-style: none;
+  vertical-align: top;
+}
 label,
 button {
   cursor: pointer;

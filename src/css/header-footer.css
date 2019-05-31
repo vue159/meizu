@@ -180,6 +180,9 @@ header .nav_out > li > a {
   text-decoration: none;
   color: #fff;
 }
+header .nav_out > li > a:hover {
+  color: #00c3f5!important;
+}
 .active {
   color: #00c3f5 !important;
 }
