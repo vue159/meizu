@@ -245,13 +245,14 @@ header {
 
             //选择地区
             .city-content {
+                
                 position: absolute;
                 left: 0;
                 z-index: 1000;
                 padding: 10px 0 15px;
                 width: 498px;
                 border: 1px solid #dedede;
-                /* display: none; */
+                display: none;
                 height: auto;
                 background: #fff;
                 .JD-stock {
@@ -302,17 +303,30 @@ header {
                             }
                         }
                     }
+                    //地区选择
                     .mc{
+                        position: absolute;
+                        top: 35px;
+                        display: none;
                         .area-list {
                             padding-top: 0;
-                            position: absolute;
                             li {
                                     float: left;
                                     width: 80px;
                                     padding: 2px 0 2px 15px;
                                     clear: none;
-                                
+                                    a {
+                                        display: block;
+                                        height: 20px;
+                                        width: 80px;
+                                        text-align: center;
+                                        &:hover{
+                                            background: rgb(109, 209, 248);
+                                            color: #fff;
+                                        }
+                                    }
                             }
+                            
                         }
                     }
                 }
@@ -370,7 +384,7 @@ header {
                 color: #000;
                 position: relative;
                 cursor: pointer;
-
+                
                 .sanjiao {
                     border: 8px solid transparent;
                     border-top-color: #000;
@@ -390,7 +404,7 @@ header {
             color: #8c8c8c;
         }
     }
-}
+
 
 .main-box-shadow::after {
     content: ' ';
@@ -401,6 +415,98 @@ header {
     height: 20px;
 
     background: url(../images/box-shadow.png) 50% bottom no-repeat;
+}
+//buy
+.property-buy{
+    margin-top: 20px;
+    //数量
+    .vm-metatit{
+        display: inline-block;
+        vertical-align: middle;
+    }
+    //数量选择
+    .num-choise{
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 30px;
+    }
+        .mod-control {
+            position: relative;
+            z-index: 1;
+            height: 40px;
+            width: 122px;
+            overflow: hidden;
+            a {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 30px;
+                height: 38px;
+                line-height: 38px;
+                font-size: 14px;
+                text-decoration: none;
+                text-align: center;
+                border: 1px solid #e7e7e7;
+                color: #000;
+                background: #f7f7f7;
+            }
+            a.disabled {
+                cursor: default;
+                color: #e0e0e0;
+            }
+            .vm-minus {
+                right: 90px;
+            }
+            input {
+                position: absolute;
+                top: 0;
+                right: 30px;
+                width: 60px;
+                height: 38px;
+                padding: 0;
+                line-height: 40px;
+                font-size: 12px;
+                text-align: center;
+                color: #595959;
+                border: 1px solid #dedede;
+            }
+}
+    // 立即购买 加入购物车
+        
+    .property-buy-action {
+        margin-top: 17px;
+        margin-left: 10px;
+        a{
+            text-align: center;
+        }
+    }
+ #J_btnAddCart {
+     border: 1px solid #27b3ff;
+     color: #27b3ff
+ }
+    .btn {
+        padding: 15px 0;
+        width: 150px;
+        font-size: 20px;
+        line-height:24px;
+    }
+    .mr20 {
+        margin-right: 20px!important;
+    }
+    .btn-lg {
+        padding: 10px 30px;
+        line-height: 1.33333;
+        border-radius: 3px;
+    }
+    .btn-primary {
+        color: #fff;
+        background-color: #27b3ff;
+    }
+
+}
+.property-buy-quantity {
+    margin-bottom: 45px;
+}
 }
 // js操作class
 .city-active{
@@ -414,4 +520,10 @@ header {
     &:hover i{
         top: 8px!important;
     }
+}
+.main-show{
+    display: block!important;
+}
+.height-1{
+    height: 180px;
 }

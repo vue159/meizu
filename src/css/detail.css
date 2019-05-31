@@ -200,7 +200,7 @@ header {
   padding: 10px 0 15px;
   width: 498px;
   border: 1px solid #dedede;
-  /* display: none; */
+  display: none;
   height: auto;
   background: #fff;
 }
@@ -248,15 +248,29 @@ header {
   top: 10px;
   background-position: 0 -28px;
 }
+.detail-main .detail-main-choise .details-main-choise-right .city-content .JD-stock .mc {
+  position: absolute;
+  top: 35px;
+  display: none;
+}
 .detail-main .detail-main-choise .details-main-choise-right .city-content .JD-stock .mc .area-list {
   padding-top: 0;
-  position: absolute;
 }
 .detail-main .detail-main-choise .details-main-choise-right .city-content .JD-stock .mc .area-list li {
   float: left;
   width: 80px;
   padding: 2px 0 2px 15px;
   clear: none;
+}
+.detail-main .detail-main-choise .details-main-choise-right .city-content .JD-stock .mc .area-list li a {
+  display: block;
+  height: 20px;
+  width: 80px;
+  text-align: center;
+}
+.detail-main .detail-main-choise .details-main-choise-right .city-content .JD-stock .mc .area-list li a:hover {
+  background: #6dd1f8;
+  color: #fff;
 }
 .detail-main .property-service {
   border-bottom: 1px dashed #dedede;
@@ -314,7 +328,7 @@ header {
   line-height: 42px;
   color: #8c8c8c;
 }
-.main-box-shadow::after {
+.detail-main .main-box-shadow::after {
   content: ' ';
   position: absolute;
   bottom: 0px;
@@ -322,6 +336,91 @@ header {
   width: 100%;
   height: 20px;
   background: url(../images/box-shadow.png) 50% bottom no-repeat;
+}
+.detail-main .property-buy {
+  margin-top: 20px;
+}
+.detail-main .property-buy .vm-metatit {
+  display: inline-block;
+  vertical-align: middle;
+}
+.detail-main .property-buy .num-choise {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 30px;
+}
+.detail-main .property-buy .mod-control {
+  position: relative;
+  z-index: 1;
+  height: 40px;
+  width: 122px;
+  overflow: hidden;
+}
+.detail-main .property-buy .mod-control a {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 38px;
+  line-height: 38px;
+  font-size: 14px;
+  text-decoration: none;
+  text-align: center;
+  border: 1px solid #e7e7e7;
+  color: #000;
+  background: #f7f7f7;
+}
+.detail-main .property-buy .mod-control a.disabled {
+  cursor: default;
+  color: #e0e0e0;
+}
+.detail-main .property-buy .mod-control .vm-minus {
+  right: 90px;
+}
+.detail-main .property-buy .mod-control input {
+  position: absolute;
+  top: 0;
+  right: 30px;
+  width: 60px;
+  height: 38px;
+  padding: 0;
+  line-height: 40px;
+  font-size: 12px;
+  text-align: center;
+  color: #595959;
+  border: 1px solid #dedede;
+}
+.detail-main .property-buy .property-buy-action {
+  margin-top: 17px;
+  margin-left: 10px;
+}
+.detail-main .property-buy .property-buy-action a {
+  text-align: center;
+}
+.detail-main .property-buy #J_btnAddCart {
+  border: 1px solid #27b3ff;
+  color: #27b3ff;
+}
+.detail-main .property-buy .btn {
+  padding: 15px 0;
+  width: 150px;
+  font-size: 20px;
+  line-height: 24px;
+}
+.detail-main .property-buy .mr20 {
+  margin-right: 20px!important;
+}
+.detail-main .property-buy .btn-lg {
+  padding: 10px 30px;
+  line-height: 1.33333;
+  border-radius: 3px;
+}
+.detail-main .property-buy .btn-primary {
+  color: #fff;
+  background-color: #27b3ff;
+}
+.detail-main .property-buy-quantity {
+  margin-bottom: 45px;
 }
 .city-active {
   border: 1px solid #000!important;
@@ -334,4 +433,10 @@ header {
 }
 .city-active:hover i {
   top: 8px!important;
+}
+.main-show {
+  display: block!important;
+}
+.height-1 {
+  height: 180px;
 }
