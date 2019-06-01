@@ -1,0 +1,63 @@
+@charset "utf-8";
+.buy-nav-right li,
+.buy-nav-left {
+  float: left;
+  width: 85px;
+  font-size: 14px;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+}
+.buy-nav-right li a {
+  transition: .8s;
+}
+.buy-nav-right li:hover a {
+  color: #16b6f2;
+}
+.buy-nav-left {
+  margin-left: 30px;
+}
+.main-notlogin {
+  margin: 10px 0 50px 0;
+}
+.main-notlogin .buy-car {
+  padding: 100px 200px;
+  background: #fff;
+  text-align: center;
+}
+.main-notlogin .buy-car .notfund {
+  background: url(../images/notFound-804fc26175.png) no-repeat;
+  width: 102px;
+  height: 133px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 30px;
+}
+.main-notlogin .buy-car .buy-right {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+  color: #666;
+}
+.main-notlogin .buy-car .buy-right .cart-empty-title {
+  font-size: 18px;
+  font-weight: bolder;
+  margin-bottom: 15px;
+}
+.main-notlogin .buy-car .buy-right .cart-empty-desc {
+  margin-bottom: 20px;
+}
+.main-notlogin .mz-btn.l {
+  width: 56px;
+  height: 34px;
+  line-height: 34px;
+  padding: 0 36px;
+}
+.main-notlogin .mz-btn.success {
+  color: #FFF;
+  border-color: #00c3f5;
+  background-color: #00c3f5;
+  text-align: center;
+  border-radius: 5px;
+  display: block;
+}

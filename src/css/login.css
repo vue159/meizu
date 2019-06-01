@@ -1,0 +1,313 @@
+@charset "utf-8";
+body {
+  font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif;
+  background: #fff!important;
+}
+#wrapper {
+  width: 1000px;
+  margin: 0 auto;
+}
+.ucSimpleHeader {
+  height: auto;
+  padding-top: 28px;
+  padding-bottom: 40px;
+  position: relative;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+.ucSimpleHeader .meizuLogo {
+  float: left;
+  height: 20px;
+  width: 110px;
+  overflow: hidden;
+  display: block;
+}
+.ucSimpleHeader .meizuLogo i {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: url(../images/base.png) -2px -4px no-repeat;
+}
+.login-banner {
+  position: relative;
+  /* overflow: hidden; */
+  min-height: 750px;
+  max-height: 1080px;
+  background: #f8fcff;
+  background: linear-gradient(to bottom, #f8fcff, #f8fcff, #f8fcff);
+}
+.login-banner::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../images/banner.png) no-repeat center;
+  background-size: contain;
+  background-color: #EDF9FB;
+}
+.login-banner .bg-box {
+  position: relative;
+  width: 1240px;
+  height: 750px;
+  margin: 0 auto;
+}
+.login-banner .bg-box .form {
+  width: 298px;
+  position: absolute;
+  top: 16%;
+  right: 85px;
+  background-color: #FFF;
+  padding: 35px 35px 10px;
+  border-radius: 2px;
+}
+.login-banner .bg-box .form .login {
+  font-size: 1.5em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  /* margin-bottom: 60px; */
+  margin-top: 35px;
+  color: #666;
+  text-align: center;
+}
+.login-banner .bg-box .form i {
+  font-size: 14px;
+  color: grey;
+}
+.login-banner .bg-box .form .user {
+  margin-bottom: 20px;
+  height: 48px;
+  border: 1px solid #ccc;
+  line-height: 48px;
+  border-radius: 3px;
+}
+.login-banner .bg-box .form .user span {
+  display: inline-block;
+  vertical-align: middle;
+  width: 55px;
+  padding-left: 10px;
+  height: 30px;
+  border-right: 1px solid #ccc;
+  line-height: 30px;
+  position: relative;
+}
+.login-banner .bg-box .form .user span em {
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: #ccc;
+  position: absolute;
+  right: 13px;
+  top: 8px;
+  transform: rotate(45deg);
+}
+.login-banner .bg-box .form .user span em::after {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  position: absolute;
+  top: -1px;
+  right: 1px;
+}
+.login-banner .bg-box .form .user #user {
+  margin-left: 10px;
+  outline: none;
+  font-size: 14px;
+  display: inline-block;
+  vertical-align: middle;
+  border: none;
+  width: 200px;
+  color: gray;
+  height: 30px;
+}
+.login-banner .bg-box .form .psw {
+  margin-bottom: 20px;
+  height: 48px;
+  border: 1px solid #ccc;
+  line-height: 48px;
+  border-radius: 3px;
+}
+.login-banner .bg-box .form .psw span {
+  display: inline-block;
+  vertical-align: middle;
+  width: 55px;
+  padding-left: 10px;
+  height: 30px;
+  border-right: 1px solid #ccc;
+  line-height: 30px;
+  position: relative;
+}
+.login-banner .bg-box .form .psw #passwrod {
+  margin-left: 10px;
+  outline: none;
+  font-size: 14px;
+  display: inline-block;
+  vertical-align: middle;
+  border: none;
+  width: 200px;
+  color: gray;
+  height: 30px;
+}
+.login-banner .bg-box .form .btn-lg-re {
+  cursor: pointer;
+  width: 295px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  background: #56bdf9;
+  border-radius: 3px;
+  margin: 0 auto;
+  color: #fff;
+}
+.login-banner .bg-box .form .btn-lg-re:hover {
+  box-shadow: 0 0 3px #aaa;
+}
+.login-banner .bg-box .form .btn-register {
+  margin-top: 5px;
+}
+footer {
+  margin-top: 40px;
+}
+footer .footer-nav {
+  float: left;
+  margin: 10px;
+}
+footer .footer-nav li {
+  float: left;
+  height: 100%;
+  margin: 0 10px;
+}
+footer .footer-nav li a {
+  height: 30px;
+  line-height: 30px;
+  display: block;
+  color: #000;
+  transition: .8s;
+  cursor: pointer;
+}
+footer .footer-nav li a:hover {
+  color: #56bdf9;
+}
+footer .kfrx {
+  margin: 10px;
+  float: left;
+}
+footer .kfrx span {
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  color: black;
+  margin: 0 10px;
+}
+footer .kfrx span:nth-of-type(3) {
+  background: #32a5e7;
+  color: #fff;
+  border-radius: 5px;
+  width: 75px;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+}
+footer .footer-right-con {
+  float: right;
+  height: 100%;
+}
+footer .footer-right-con span {
+  width: 35px;
+  height: 35px;
+  margin: 0 10px;
+  float: left;
+  background: url(../images/base.png) no-repeat;
+}
+footer .footer-right-con span:nth-of-type(1) {
+  background-position: -215px -90px;
+}
+footer .footer-right-con span:nth-of-type(1):hover {
+  background-position: -215px -135px;
+}
+footer .footer-right-con span:nth-of-type(2) {
+  background-position: -258px -90px;
+  position: relative;
+}
+footer .footer-right-con span:nth-of-type(2) em {
+  display: none;
+}
+footer .footer-right-con span:nth-of-type(2) em::before {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  box-shadow: 0 0 3px #aaa;
+  transform: rotate(45deg);
+  position: absolute;
+  left: 50%;
+  margin-left: -15px;
+  bottom: 60px;
+}
+footer .footer-right-con span:nth-of-type(2) em::after {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  transform: rotate(45deg);
+  position: absolute;
+  left: 50%;
+  margin-left: -15px;
+  bottom: 60px;
+}
+footer .footer-right-con span:nth-of-type(2) em i {
+  content: '';
+  display: block;
+  width: 180px;
+  height: 180px;
+  box-shadow: 0 0 3px #aaa;
+  position: absolute;
+  top: -220px;
+  left: -75px;
+  background: #fff url(../images/index/33474117-9a2d-455d-a8ff-997355238400.jpg) no-repeat center;
+  background-size: 85% ;
+}
+footer .footer-right-con span:nth-of-type(2):hover {
+  background-position: -258px -135px;
+}
+footer .footer-right-con span:nth-of-type(2):hover em {
+  display: block;
+}
+footer .footer-right-con span:nth-of-type(3) {
+  background-position: -300px -90px;
+}
+footer .footer-right-con span:nth-of-type(3):hover {
+  background-position: -300px -135px;
+}
+footer .copyrightWrap {
+  width: 100%;
+}
+footer .copyrightInner {
+  width: 1000px;
+  margin: 0px auto;
+}
+footer .copyrightInner span {
+  color: #7f7f7f;
+  float: left;
+}
+footer .copyrightInner a {
+  white-space: nowrap;
+  float: left;
+  color: #7f7f7f;
+  margin-left: 6px;
+  font-size: 12px;
+}
+footer .copyrightInner a a {
+  white-space: nowrap;
+  float: left;
+  color: #7f7f7f;
+  margin-left: 6px;
+}

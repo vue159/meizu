@@ -1,4 +1,5 @@
 //头部的向上隐藏
+console.log('ok')
 $('header').css('margin-top', '-82px')
 $('body').mousewheel(function(event, delta) {
     var dir = delta > 0 ? 'Up' : 'Down';
@@ -269,15 +270,10 @@ $.ajax({
                             </dl>
                             <div class="property-buy-action">
     
-                                <a data-mtype="store_de_buy" data-bh="click_store_de_buy" href="javascript:void(0);"
+                                <a data-mtype="store_de_buy" data-bh="click_store_de_buy" href="buy.html"
                                     id="J_btnBuy" class="btn btn-primary btn-lg mr20"
                                     style="display: inline-block;">立即购买</a>
-                                <a data-mtype="store_de_cart" data-bh="click_store_de_cart" href="javascript:void(0);"
-                                    id="J_btnAddCart" class="btn btn-empty btn-lg hide"
-                                    style="display: inline-block;"><i></i>加入购物车</a>
-                                <a href="javascript:void(0);" data-mtype="store_de_remind" data-bh="click_store_de_remind"
-                                    id="J_btnRemind" class="btn btn-empty btn-lg hide"
-                                    style="display: none;"><i></i>开售提醒</a>
+                                
                                 <span class="vm-service" id="J_panicBuyingWrap"></span>
                             </div>
                         </div>
@@ -309,19 +305,53 @@ $.ajax({
             if($('#J_quantity').val()<${response.num}){
                 shopnum++;
                 $('#J_quantity').val(shopnum)
-                console.log($('#J_quantity').val())
                 }else if($('#J_quantity').val()>=${response.num}){
-                    console.log($('#J_quantity').val())
                     numjia.addClass('disabled')
                 }
             })
             numjian.on('click', function() {
-                if($('#J_quantity').val()<${response.num}){
-                }
-                ('disabled')
-                   shopnum--;
-                   $('#J_quantity').val(shope if($('#J_quantity').val()<la
 
+                if($('#J_quantity').val()<=${response.num}){
+             numjia.removeClass('disabled')
+            } 
+            if($('#J_quantity').val()>1){
+                shopnum--;
+                $('#J_quantity').val(shopnum)
+                }else if($('#J_quantity').val()<=1){
+                    numjian.addClass('disabled')
+                }
+            })
+                            $('.site-selector .text').hover(function() {
+                                $('.city-content').addClass('main-show');
+                                $('.city-content .tab li').on('click', function() {
+                                    var index = $('.city-content .tab li').index(this);
+                                    // console.log(index)
+                                    $('.city-content .tab li').find('a').removeClass('city-active')
+                                    $(this).find('a').addClass('city-active');
+                                    $('.zw').removeClass('height-1')
+                                    $('.zw').css({
+                                        'height': $('.mc').eq(index).height()
+                                    })
+                                    console.log($('.city-content').height())
+                                    console.log($('.zw').height())
+                                    $('.mc').removeClass('main-show');
+                                    $('.mc').eq(index).addClass('main-show');
+                            
+                                })
+                            }, function() {
+                                $('.city-content').removeClass('main-show');
+                            })
+                            $('.city-content').hover(function() {
+                                $('.city-content').addClass('main-show');
+                            }, function() {
+                                $('.city-content').removeClass('main-show');
+                            })
+                            $('.mc').last().find('a').on('click', function() {
+                                    $('.site-selector .text').html('浙江省 杭州市 江干区' + ' ' + $(this).html() + '<i class="sanjiao"></i>')
+                                    $('city-content').css('dislay', 'none!important')
+                                })
+          </script>
+`
         $('.main').append(template)
 
     }
@@ -330,45 +360,5 @@ $.ajax({
 
 //main-选购
 //city-coise
-$('.site-selector .text').hover(function() {
-    $('.city-content').addClass('main-show');
-    $('.city-content .tab li').on('click', function() {
-        var index = $('.city-content .tab li').index(this);
-        // console.log(index)
-        $('.city-content .tab li').find('a').removeClass('city-active')
-        $(this).find('a').addClass('city-active');
-        $('.zw').removeClass('height-1')
-        $('.zw').css({
-            'height': $('.mc').eq(index).height()
-        })
-        console.log($('.city-content').height())
-        console.log($('.zw').height())
-        $('.mc').removeClass('main-show');
-        $('.mc').eq(index).addClass('main-show');
-
-    })
-}, function() {
-    $('.city-content').removeClass('main-show');
-})
-$('.city-content').hover(function() {
-    $('.city-content').addClass('main-show');
-}, function() {
-    $('.city-content').removeClass('main-show');
-})
-$('.mc').last().find('a').on('click', function() {
-        $('.site-selector .text').html('浙江省 杭州市 江干区' + ' ' + $(this).html() + '<i class="sanjiao"></i>')
-        $('city-content').css('dislay', 'none!important')
-    })
-    //buy
-    //ajax
-
-
-$(function() {
-
-    $("img.lazy-img").lazyload({
-        effect: "fadeIn",
-        threshold: 200,
-        placeholder: "../images/timg.gif"
-    });
-
-});
+//buy
+//ajax
