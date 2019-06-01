@@ -145,12 +145,12 @@
   text-align: center;
   border-radius: 50%;
 }
-#index_main .index_main_3 .big:nth-of-type(2) {
-  margin-right: 0px;
-}
 #index_main .index_main_3 .big {
   width: 615px;
   height: 610px;
+}
+#index_main .index_main_3 .big:nth-of-type(2) {
+  margin-right: 0;
 }
 #index_main .index_main_3 .big .goods-img {
   position: absolute;

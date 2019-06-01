@@ -19,5 +19,13 @@
   "dependencies": {
     "jquery": "^3.4.1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vue159/meizu.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vue159/meizu/issues"
+  },
+  "homepage": "https://github.com/vue159/meizu#readme",
   "description": ""
 }
