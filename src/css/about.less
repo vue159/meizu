@@ -1,0 +1,254 @@
+@charset "utf-8";
+
+.main-about {
+
+    position: relative;
+    min-height: 800px;
+    box-sizing: border-box;
+
+    // overflow: hidden;
+
+    .about-banners__item {
+        position: relative;
+        // display: none;
+        background-color: #fefefe;
+        width: 100%;
+
+        img {
+            width: 100%;
+            display: block;
+            max-height: 637px;
+        }
+    }
+}
+
+
+.address-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+    .address-box {
+        width: 95%;
+        margin: 0 auto;
+
+        .address {
+            color: #fff;
+
+            .is-last {
+                margin-bottom: 24px;
+            }
+        }
+
+        .address-title {
+            font-size: 24px;
+            margin-bottom: 33px;
+        }
+
+        .address-detail {
+            font-size: 14px;
+        }
+
+        .address-info {
+            font-size: 12px;
+        }
+    }
+
+    .address-box {
+        width: 936px;
+    }
+}
+
+//about-container
+.about-container {
+    width: 936px;
+    margin: 0 auto;
+
+    //tab
+    .about-tabs {
+        margin-top: 33px;
+        margin-bottom: 99px;
+        margin-left: 100px;
+        .about-tabs__item {
+            float: left;
+            width: 16%;
+            border-bottom: 2px solid transparent;
+            color: #bebebe;
+
+            &:hover {
+                transition:.2s linear;
+                cursor: pointer;
+                color: #35b8f9;
+                border-bottom-color: #35b8f9;
+            }
+
+            &:not(:last-of-type) {
+                margin-right: 5%;
+            }
+
+            .about-tabs__link {
+                display: block;
+                height: 38px;
+                padding: 4px 18px;
+                font-size: 24px;
+                font-weight: 400;
+                line-height: 28px;
+                text-align: center;
+                color: inherit;
+            }
+        }
+    }
+
+    //panels
+    .about-panels {
+        color: #6f6d6b;
+        position: relative;
+        font-size: 15px;
+        font-weight: 400;
+        margin: 0 18px;
+        // max-height: 637px;
+
+        // overflow: hidden;
+        // 了解魅族
+        .know {
+            padding-bottom: 144px;
+            .info-list {
+                color: #6f6d6b;
+                line-height: 25px;
+            }
+        }
+            //发展历史
+            .history{
+                .event-list__item {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    margin-bottom: 72px;
+                    .item-title {
+                        width: 23%;
+                        margin-top: -6px;
+                        font-size: 24px;
+                        color: #272727;
+                    }
+                    .item-details {
+                        flex: 1;
+                        .detail {
+                            position: relative;
+                            margin-bottom: 72px;
+                            &::before{
+                                    content: "";
+                                    position: absolute;
+                                    top: 50%;
+                                    left: -22px;
+                                    -ms-transform: translateY(-50%);
+                                    transform: translateY(-50%);
+                                    width: 6px;
+                                    height: 6px;
+                                    border-radius: 50%;
+                                    background-color: #44bdf9;
+                                
+                            }
+                        }
+                    }
+                }
+            }
+            // 产品列表
+            .product-list__item {
+                margin-bottom: 180px;
+                .item-title {
+                    font-size: 30px;
+                    font-weight: 400;
+                    color: #272727;
+                    margin-bottom: 30px;
+                }
+                .phone-picture img {
+                    height: 140px;
+                }
+                        .phone-list__item {
+                            width: 20%;
+                            float: left;
+                            padding-bottom: 29px;
+                            text-align: center;
+                            .phone-title {
+                                margin-top: 12px;
+                                color: #8e8b8c;
+                            }
+                        }
+            }
+            .contact-title {
+                font-size: 24px;
+                font-weight: 400;
+            }
+            .contact-item {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                margin-bottom: 100px;
+            }
+            .contact-item__left {
+                width: 64%;
+            }
+            .contact-item__right {
+                width: 36%;
+            }
+            .contact-sub-title {
+                font-weight: 500;
+                margin-top: 30px;
+            }
+            .contact-item__detail {
+                line-height: 2;
+                a {
+                    color: inherit;
+                }
+            }
+            .contact-item__button {
+                display: inline-block;
+                padding: 2px 10px;
+                margin-top: 4px;
+                border: 0;
+                outline: 0;
+                color: #fff;
+                background-color: #32b7f9;
+                border-radius: 14px;
+            }
+        
+    }
+
+    .about-panels__item {
+        display: none;
+        position: absolute;
+        animation: opacity-about .3s forwards
+    }
+}
+@keyframes opacity-about{
+    0% {
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+
+}
+p {
+    max-height: 100%;
+}
+
+.about *,
+.about ::before,
+.about ::after {
+    box-sizing: border-box;
+}
+
+.about-show {
+    display: block!important;
+}
+
+.about-active {
+    color: #35b8f9!important;
+    border-bottom-color: #35b8f9!important;
+}

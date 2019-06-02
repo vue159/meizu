@@ -37,6 +37,13 @@ img {
   border: 0;
   vertical-align: middle;
 }
+header,
+section,
+article,
+main,
+footer {
+  display: block;
+}
 button,
 input,
 optgroup,
