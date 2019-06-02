@@ -3,7 +3,7 @@ body {
   font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif;
   background: #fff!important;
 }
-#wrapper {
+.wrapper {
   width: 1000px;
   margin: 0 auto;
 }
