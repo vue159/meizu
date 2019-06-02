@@ -165,6 +165,9 @@ body {
   margin: 0 auto;
   color: #fff;
 }
+.login-banner .bg-box .form .btn-lg-re a {
+  color: #fff;
+}
 .login-banner .bg-box .form .btn-lg-re:hover {
   box-shadow: 0 0 3px #aaa;
 }
