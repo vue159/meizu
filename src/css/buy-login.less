@@ -47,6 +47,13 @@
                    .sp-pri{
                        color:brown;
                    }
+                   .sp-num{
+                       input{
+                        text-align: center;
+                           display: inline-block;
+                           width: 50px;
+                       }
+                   }
                }
             }
             .del{
@@ -66,5 +73,38 @@
                 }
             }
         }
+    }
+    .sp-all{
+        .wrapper{
+            background: #fff;
+            margin: 20px auto;
+            width: 1200px;
+            height: 40px;
+            padding: 20px;
+            line-height: 40px;
+            span {
+                font-size: 28px;
+                &:nth-of-type(1){
+                    float: left;
+                    input{
+                        display: inline-block;
+                        width: 20px;
+                        height: 20px;
+                        margin-right: 10px;
+                    }
+                }
+                &:nth-of-type(2){
+                    float: right;
+                    i{
+                        width: 80px;
+                        text-align: center;
+                        font-size: 28px;
+                        color: brown;
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+
     }
 }

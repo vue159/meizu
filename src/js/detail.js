@@ -358,7 +358,7 @@ $.ajax({
 `
         $('.main').append(template).find('#J_btnBuy').on('click', function() {
             console.log(this)
-            addShopCar(response.id, response.price, $('#num').val());
+            addShopCar(response.id, response.price, $('#J_quantity').val());
         });
 
 

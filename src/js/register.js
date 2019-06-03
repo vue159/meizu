@@ -20,9 +20,9 @@ psw.on('keyup', function() { //正则验证密码
 })
 
 $('.btn-register a').on('click', function() {
-    check()
-})
-console.log($('.btn-register a'))
+        check()
+    })
+    // console.log($('.btn-register a'))
 
 function check() {
     var pass = document.querySelectorAll('input[data-pass="true"]');
@@ -36,11 +36,8 @@ function check() {
             },
             success: function(response) {
                 console.log(response)
-                if (response == 1) {
-                    $('.btn-register a').attr('href', 'login.html')
-                } else {
-                    $('tishi').html('用户名已存在')
-                }
+                response == 1 ? window.location.href = "login.html" : $('tishi').html('用户名已存在');
+
             }
         });
 

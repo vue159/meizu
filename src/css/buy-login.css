@@ -49,6 +49,11 @@
 .main-login .buy-login-car li .dingdan .sp-cont .sp-pri {
   color: brown;
 }
+.main-login .buy-login-car li .dingdan .sp-cont .sp-num input {
+  text-align: center;
+  display: inline-block;
+  width: 50px;
+}
 .main-login .buy-login-car li .del {
   width: 60px;
   height: 45px;
@@ -63,4 +68,34 @@
 }
 .main-login .buy-login-car li .del:hover {
   box-shadow: 0 0 3px #aaa;
+}
+.main-login .sp-all .wrapper {
+  background: #fff;
+  margin: 20px auto;
+  width: 1200px;
+  height: 40px;
+  padding: 20px;
+  line-height: 40px;
+}
+.main-login .sp-all .wrapper span {
+  font-size: 28px;
+}
+.main-login .sp-all .wrapper span:nth-of-type(1) {
+  float: left;
+}
+.main-login .sp-all .wrapper span:nth-of-type(1) input {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+.main-login .sp-all .wrapper span:nth-of-type(2) {
+  float: right;
+}
+.main-login .sp-all .wrapper span:nth-of-type(2) i {
+  width: 80px;
+  text-align: center;
+  font-size: 28px;
+  color: brown;
+  display: inline-block;
 }

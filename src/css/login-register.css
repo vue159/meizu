@@ -175,6 +175,9 @@ body {
 .login-banner .bg-box .form .btn-register {
   margin-top: 5px;
 }
+.login-banner .bg-box .form .tishi {
+  color: red!important;
+}
 footer {
   margin-top: 40px;
 }

@@ -39,17 +39,11 @@ function check() {
                 'password': psw.val()
             },
             success: function(data) {
-                if (data == 1) {
-                    $('.btn-login a').attr('href', 'index.html')
-                } else {
-                    $('.tishi').html('帐号密码输入错误');
-                    $('.tishi').css('color', 'red')
-                }
+                data == 1 ? window.location.href = "index.html" : $('.tishi').html('帐号密码输入错误');
             }
         });
 
     } else {
         $('.tishi').html('格式错误请重新输入');
-        $('.tishi').css('color', 'red')
     }
 }
