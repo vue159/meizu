@@ -350,15 +350,48 @@ $.ajax({
                                     $('.site-selector .text').html('浙江省 杭州市 江干区' + ' ' + $(this).html() + '<i class="sanjiao"></i>')
                                     $('city-content').css('dislay', 'none!important')
                                 })
+                $('#J_btnBuy').on('click',function(){
+
+                })
+
           </script>
 `
-        $('.main').append(template)
+        $('.main').append(template).find('#J_btnBuy').on('click', function() {
+            console.log(this)
+            addShopCar(response.id, response.price, $('#num').val());
+        });
 
+
+        function addShopCar(id, price, num) {
+            var shop = cookie.get('shop'); //从cookie获取shop
+            var product = {
+                "id": id,
+                "price": price,
+                "num": num
+            };
+
+            if (shop) {
+                shop = JSON.parse(shop); // cookie中如果有数据 这个数据是json字符串 转成对象
+
+                if (shop.some(elm => elm.id == id)) {
+                    shop.forEach(function(elm, i) {
+                        elm.id == id ? elm.num = num : null;
+                    });
+                } else {
+                    shop.push(product);
+                }
+                cookie.set('shop', JSON.stringify(shop), 1);
+            } else {
+                shop = [];
+                shop.push(product);
+                cookie.set('shop', JSON.stringify(shop), 1);
+            }
+        }
     }
 
 });
-
-//main-选购
-//city-coise
-//buy
-//ajax
+$("img.lazy-img").lazyload({
+    effect: "fadeIn",
+    threshold: 200,
+    placeholder: "../images/timg.gif"
+});

@@ -3,3 +3,64 @@
   background: #f1f4f9;
   margin: 10px 0 50px 0;
 }
+.main-login .buy-login-car {
+  padding: 20px;
+  background: #fff;
+}
+.main-login .buy-login-car li {
+  margin-top: 10px;
+  border-top: 1px solid #aaa;
+}
+.main-login .buy-login-car li:nth-of-type(1) {
+  border-top: none;
+}
+.main-login .buy-login-car li .sp-check {
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+}
+.main-login .buy-login-car li .sp-img {
+  width: 120px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.main-login .buy-login-car li .sp-title {
+  font-size: 2em;
+  font-weight: bold;
+  display: inline-block;
+  vertical-align: middle;
+}
+.main-login .buy-login-car li .dingdan {
+  display: inline-block;
+  text-align: right;
+  vertical-align: middle;
+}
+.main-login .buy-login-car li .dingdan .sp-cont {
+  padding-left: 20px;
+}
+.main-login .buy-login-car li .dingdan .sp-cont p {
+  float: left;
+  margin: 0 20px;
+}
+.main-login .buy-login-car li .dingdan .sp-cont .sp-content {
+  color: brown;
+}
+.main-login .buy-login-car li .dingdan .sp-cont .sp-pri {
+  color: brown;
+}
+.main-login .buy-login-car li .del {
+  width: 60px;
+  height: 45px;
+  font-size: 24px;
+  float: right;
+  margin-top: 30px;
+  line-height: 45px;
+  background: #f1f4f9;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+.main-login .buy-login-car li .del:hover {
+  box-shadow: 0 0 3px #aaa;
+}

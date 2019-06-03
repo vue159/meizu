@@ -156,6 +156,10 @@ body {
 }
 .login-banner .bg-box .form .btn-lg-re {
   cursor: pointer;
+  color: #fff;
+}
+.login-banner .bg-box .form .btn-lg-re a {
+  display: block;
   width: 295px;
   height: 36px;
   line-height: 36px;
@@ -163,9 +167,6 @@ body {
   background: #56bdf9;
   border-radius: 3px;
   margin: 0 auto;
-  color: #fff;
-}
-.login-banner .bg-box .form .btn-lg-re a {
   color: #fff;
 }
 .login-banner .bg-box .form .btn-lg-re:hover {
