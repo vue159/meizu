@@ -39,18 +39,7 @@ function check() {
                 'password': psw.val()
             },
             success: function(data) {
-                if (data == 1) {
-                    window.location.href = "index.html";
-                    cookie.set({
-                        'username': user.val(),
-                        'password': psw.val()
-                    }, JSON.stringify({
-                        'username': user.val(),
-                        'password': psw.val()
-                    }), 1);
-                } else {
-                    $('.tishi').html('帐号密码输入错误')
-                }
+                data == 1 ? window.location.href = "index.html" : $('.tishi').html('帐号密码输入错误');
             }
         });
 
