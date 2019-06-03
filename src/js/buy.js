@@ -28,7 +28,7 @@ if (shop) {
                                 <p class="sp-content">${elm.details}</p>
                                 <p class="sp-num">数量：<input type="number"value="${arr[0].num}" disabled checked></p>
                                 <p class="sp-pri"><i>单价：￥</i>${elm.price}</p>
-                                <p class="sp-pri-all">总价：￥<i></i></p>
+                                <p class="sp-pri-all">总价：￥<i class="money"></i></p>
                             </div>
                         </div>
                         <div class="del">删除</div>
@@ -41,6 +41,35 @@ if (shop) {
             });
             // $('.sp-allmoney').html($('.sp-pri-all')[checked])
             // console.log($('.sp-pri-all')[checked])
+            console.log($("[type='checkbox']:checked"))
+            var checkbox = $("input[type=checkbox]");
+
+            var money = 0;
+            checkbox.on("click", function() {
+                for (var i = 0; i < $('input[type=checkbox]').length - 1; i++) {
+                    if ($('input[type=checkbox]')[i].checked) {
+                        console.log(this)
+                        money += parseFloat($(this.parentNode).find('.money').html())
+                        $('.sp-allmoney i').html(money.toFixed(2))
+                    }
+                }
+                console.log(money)
+
+
+
+
+                // if (this.checked) {
+                //     $(this).attr('checked', 'checked');
+                //     console.log($("[type='checkbox']:checked").parents().find(('.money')))
+                //         // $('.sp-allmoney').html( $("input[type=checkbox]").parentNode.parentNode.parentNode.next())
+                // } else {
+
+                // }
+            })
+
+
+
+
             $('.del').on('click', function() {
                 var index = $('.del').index(this)
                 console.log(shop[index])
