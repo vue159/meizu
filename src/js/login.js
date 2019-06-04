@@ -39,7 +39,14 @@ function check() {
                 'password': psw.val()
             },
             success: function(data) {
-                data == 1 ? window.location.href = "index.html" : $('.tishi').html('帐号密码输入错误');
+                if (data == 1) {
+                    $.cookie('user', user.val());
+                    $.cookie('psw', psw.val());
+                    window.location.href = "index.html"
+                } else {
+                    $('.tishi').html('帐号密码输入错误')
+                }
+                // data == 1 ? window.location.href = "index.html" : $('.tishi').html('帐号密码输入错误');
             }
         });
 
